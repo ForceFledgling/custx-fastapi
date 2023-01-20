@@ -16,7 +16,7 @@ from ..models.roles import RoleName
 from ..settings import settings
 
 
-oath2_scheme = OAuth2PasswordBearer(tokenUrl='/auth/sign-in')  # обявляем схему с формой авторизации
+oath2_scheme = OAuth2PasswordBearer(tokenUrl='/api/auth/sign-in')  # обявляем схему с формой авторизации
 
 
 def get_current_user(token: str = Depends(oath2_scheme)) -> User:
